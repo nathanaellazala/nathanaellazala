@@ -24,14 +24,14 @@ The source for my business website and portfolio of client-facing web work.
 
 ## Currently building
 
-- **[Discord alert automation](https://github.com/nathanaellazala/DiscordTradingBot)** — Python project for time-sensitive alert parsing, validation, and dry-run order-workflow testing. Documentation is available; source publication is being prepared.
-- **Real-time market data tooling** — WebSocket data capture, cleaning, and backtesting research.
+- **[Discord alert automation](https://github.com/nathanaellazala/DiscordTradingBot)** — Python project for time-sensitive alert parsing, validation, and dry-run order-workflow testing. Source is published. The existing offline review passed 43 Python tests and 6 JavaScript matcher tests; live trading and brokerage reconciliation remain unverified.
+- **Real-time market data tooling** — planned showcase review; source, reproducibility, and my specific contributions still need verification before adding it as a featured project.
 
 ## Tools & interests
 
 `Python` · `JavaScript` · `React` · `FastAPI` · `MongoDB` · `REST APIs` · `WebSockets` · `Automation` · `Testing`
 
-**Languages:** English and Spanish
+**Project status:** Source features, synthetic tests, live deployments, and measured results are described separately. CRM security improvements are proposed through unmerged pull requests.
 
 ---
 

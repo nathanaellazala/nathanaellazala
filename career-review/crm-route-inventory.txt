@@ -1,0 +1,141 @@
+72:async def _wipe_lead_history(lead_ids: List[str]):
+169:async def get_current_user(request: Request) -> dict:
+193:async def require_owner(user: dict = Depends(get_current_user)) -> dict:
+249:async def add_audit(user_id: str, action: str, entity_type: str, entity_id: str, old: Any = None, new: Any = None):
+394:@api.post("/auth/login")
+395:async def login(body: LoginIn, response: Response):
+408:@api.post("/auth/logout")
+409:async def logout(response: Response, _: dict = Depends(get_current_user)):
+413:@api.get("/auth/me")
+414:async def me(user: dict = Depends(get_current_user)):
+417:@api.post("/auth/refresh")
+418:async def refresh(request: Request, response: Response):
+438:@api.get("/users")
+439:async def list_users(user: dict = Depends(get_current_user)):
+469:@api.post("/users/me/heartbeat")
+470:async def heartbeat(user: dict = Depends(get_current_user)):
+481:@api.post("/users/me/change-password")
+482:async def change_own_password(body: ChangePasswordIn, user: dict = Depends(get_current_user)):
+501:@api.patch("/users/me")
+502:async def update_own_profile(body: SelfProfileIn, user: dict = Depends(get_current_user)):
+532:@api.get("/users/{user_id}/activity")
+533:async def user_activity(user_id: str, user: dict = Depends(get_current_user)):
+543:@api.get("/users/{user_id}/activity-history")
+544:async def user_activity_history(user_id: str, user: dict = Depends(get_current_user)):
+632:@api.post("/users")
+633:async def create_user(body: UserCreateIn, user: dict = Depends(require_owner)):
+656:@api.patch("/users/{user_id}")
+657:async def update_user(user_id: str, body: UserUpdateIn, user: dict = Depends(require_owner)):
+671:@api.post("/users/{user_id}/reset-password")
+672:async def reset_password(user_id: str, body: PasswordResetIn, user: dict = Depends(require_owner)):
+685:@api.get("/statuses")
+686:async def list_statuses(_: dict = Depends(get_current_user)):
+690:@api.post("/statuses")
+691:async def create_status(body: StatusIn, user: dict = Depends(require_owner)):
+701:@api.patch("/statuses/{sid}")
+702:async def update_status(sid: str, body: StatusIn, user: dict = Depends(require_owner)):
+708:@api.delete("/statuses/{sid}")
+709:async def delete_status(sid: str, user: dict = Depends(require_owner)):
+728:@api.get("/leads")
+729:async def list_leads(
+830:@api.get("/leads/{lead_id}")
+831:async def get_lead(lead_id: str, user: dict = Depends(get_current_user)):
+846:@api.post("/leads")
+847:async def create_lead(body: LeadIn, user: dict = Depends(get_current_user)):
+869:@api.patch("/leads/{lead_id}")
+870:async def update_lead(lead_id: str, body: LeadUpdateIn, user: dict = Depends(get_current_user)):
+923:@api.delete("/leads/{lead_id}")
+924:async def delete_lead(lead_id: str, user: dict = Depends(require_owner)):
+943:@api.post("/leads/bulk-status")
+944:async def bulk_status(body: BulkStatusIn, user: dict = Depends(require_owner)):
+974:@api.post("/leads/assign")
+975:async def assign_leads(body: AssignIn, user: dict = Depends(require_owner)):
+1005:@api.post("/leads/round-robin")
+1006:async def round_robin(body: RoundRobinIn, user: dict = Depends(require_owner)):
+1055:@api.post("/leads/bulk-delete")
+1056:async def bulk_delete_leads(body: dict, user: dict = Depends(require_owner)):
+1078:@api.get("/carriers")
+1079:async def list_carriers(user: dict = Depends(get_current_user)):
+1101:@api.post("/carriers")
+1102:async def create_carrier(body: CarrierIn, user: dict = Depends(require_owner)):
+1109:@api.patch("/carriers/{cid}")
+1110:async def update_carrier(cid: str, body: CarrierIn, user: dict = Depends(require_owner)):
+1116:@api.delete("/carriers/{cid}")
+1117:async def delete_carrier(cid: str, user: dict = Depends(require_owner)):
+1123:@api.post("/carriers/{cid}/plans")
+1124:async def create_plan(
+1147:@api.delete("/carriers/{cid}/plans/{pid}")
+1148:async def delete_plan(cid: str, pid: str, user: dict = Depends(require_owner)):
+1153:@api.get("/plans/{pid}/pdf")
+1154:async def get_plan_pdf(pid: str, user: dict = Depends(get_current_user)):
+1185:@api.post("/shared-leads/move")
+1186:async def move_to_shared_pool(body: SharedMoveIn, user: dict = Depends(require_owner)):
+1217:@api.post("/shared-leads/remove")
+1218:async def remove_from_shared_pool(body: SharedMoveIn, user: dict = Depends(require_owner)):
+1234:@api.post("/shared-leads/assign")
+1235:async def assign_shared_leads(body: SharedAssignIn, user: dict = Depends(require_owner)):
+1266:@api.post("/shared-leads/bulk-delete")
+1267:async def bulk_delete_shared_leads(body: dict, user: dict = Depends(require_owner)):
+1278:@api.get("/shared-leads/export/csv")
+1279:async def export_shared_leads_csv(user: dict = Depends(require_owner), q: Optional[str] = None):
+1304:@api.get("/shared-leads")
+1305:async def list_shared_leads(
+1374:@api.post("/shared-leads/{lead_id}/lock")
+1375:async def lock_shared_lead(lead_id: str, user: dict = Depends(get_current_user)):
+1395:@api.post("/shared-leads/{lead_id}/heartbeat")
+1396:async def heartbeat_shared_lead(lead_id: str, user: dict = Depends(get_current_user)):
+1408:@api.post("/shared-leads/{lead_id}/unlock")
+1409:async def unlock_shared_lead(lead_id: str, user: dict = Depends(get_current_user)):
+1423:@api.get("/shared-leads/{lead_id}")
+1424:async def get_shared_lead(lead_id: str, user: dict = Depends(get_current_user)):
+1438:@api.patch("/shared-leads/{lead_id}")
+1439:async def update_shared_lead(lead_id: str, body: LeadUpdateIn, user: dict = Depends(get_current_user)):
+1495:@api.get("/appointments/upcoming")
+1496:async def upcoming_appointments(user: dict = Depends(get_current_user)):
+1508:@api.get("/appointments")
+1509:async def list_appointments(
+1538:@api.post("/appointments/{lead_id}/cancel")
+1539:async def cancel_appointment(lead_id: str, user: dict = Depends(get_current_user)):
+1551:@api.get("/leads/export/csv")
+1552:async def export_csv(
+1603:@api.get("/leads/{lead_id}/notes")
+1604:async def list_notes(lead_id: str, user: dict = Depends(get_current_user)):
+1610:@api.post("/leads/{lead_id}/notes")
+1611:async def create_note(lead_id: str, body: NoteIn, user: dict = Depends(get_current_user)):
+1626:@api.delete("/notes/{note_id}")
+1627:async def delete_note(note_id: str, user: dict = Depends(get_current_user)):
+1638:@api.get("/leads/{lead_id}/call-logs")
+1639:async def list_calls(lead_id: str, user: dict = Depends(get_current_user)):
+1645:@api.post("/leads/{lead_id}/call-logs")
+1646:async def create_call(lead_id: str, body: CallLogIn, user: dict = Depends(get_current_user)):
+1665:@api.get("/leads/{lead_id}/activity")
+1666:async def lead_activity(lead_id: str, user: dict = Depends(get_current_user)):
+1720:@api.post("/imports/preview")
+1721:async def import_preview(file: UploadFile = File(...), _: dict = Depends(require_owner)):
+1756:async def find_duplicate(lead: dict) -> Optional[dict]:
+1769:@api.post("/imports/commit")
+1770:async def import_commit(body: ImportCommitIn, user: dict = Depends(require_owner)):
+1880:@api.get("/imports")
+1881:async def list_imports(_: dict = Depends(require_owner)):
+1888:@api.get("/duplicates")
+1889:async def get_duplicate_groups(_: dict = Depends(require_owner)):
+1906:@api.post("/duplicates/merge")
+1907:async def merge_duplicates(body: dict, user: dict = Depends(require_owner)):
+1922:@api.get("/dashboard/owner")
+1923:async def owner_dashboard(_: dict = Depends(require_owner)):
+1981:@api.get("/dashboard/agent")
+1982:async def agent_dashboard(user: dict = Depends(get_current_user)):
+2048:async def _leaderboard_rows(period: str, offset: int, basis: str = "completed"):
+2142:@api.get("/leaderboard")
+2143:async def leaderboard(user: dict = Depends(get_current_user), period: str = "next_month", offset: int = 0, basis: str = "effective"):
+2168:@api.get("/settings/company")
+2169:async def get_company(_: dict = Depends(get_current_user)):
+2184:@api.patch("/settings/company")
+2185:async def update_company(body: dict, user: dict = Depends(require_owner)):
+2194:@api.get("/constants/call-results")
+2195:async def call_results(_: dict = Depends(get_current_user)):
+2198:@api.get("/constants/toggleable-fields")
+2199:async def toggleable_fields(_: dict = Depends(get_current_user)):
+2206:async def health():
+2224:async def startup():
+2372:async def shutdown():
