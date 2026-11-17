@@ -1,0 +1,55 @@
+{
+  "Medicare-CRM": {
+    "blobs_scanned": 288,
+    "findings": [
+      {
+        "blob": "849c601b338ff5366d437d0ad90a60ac997b1d31",
+        "path": ".emergent/cron/dispatch_webhook.sh",
+        "type": "credential_assignment",
+        "lines": [
+          50
+        ]
+      },
+      {
+        "blob": "2fa970ef1bff95b6a9adb47b2fa8b0cf4529eb00",
+        "path": "backend/security_tests/test_bootstrap.py",
+        "type": "credential_assignment",
+        "lines": [
+          28
+        ]
+      },
+      {
+        "blob": "59bb342e1151505f8011f3da9ff7e40abcbe251e",
+        "path": "backend/tests/test_iter3_features.py",
+        "type": "credential_assignment",
+        "lines": [
+          24
+        ]
+      },
+      {
+        "blob": "696d2303aebaa5de7dc6f31fa3472569e728150a",
+        "path": "backend/tests/test_iter4_shared_pool.py",
+        "type": "credential_assignment",
+        "lines": [
+          27
+        ]
+      },
+      {
+        "blob": "0e2d0bc4fdebdd5abd4f22caf2fa82976f07180c",
+        "path": "backend/seed.py",
+        "type": "credential_assignment",
+        "lines": [
+          18
+        ]
+      }
+    ]
+  },
+  "DiscordTradingBot": {
+    "blobs_scanned": 19,
+    "findings": []
+  },
+  "vertexwebsolutions": {
+    "blobs_scanned": 130,
+    "findings": []
+  }
+}
