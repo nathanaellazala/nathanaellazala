@@ -1,15 +1,38 @@
-Hi, I'm Nathanael 👋
-Software development · Python automation · Web applications · API integrations
+# Hi, I'm Nathanael 👋
 
-I build practical software that connects tools, simplifies workflows, and solves real business problems. Through Vertex Web Solutions, I work on websites, automation, and custom business systems. I'm especially interested in Python, backend logic, real-time data, and AI-assisted workflows.
-What I'm working on
-- Discord Alert Automation — A Python project for detecting and parsing time-sensitive alerts, validating messages, and testing order-workflow logic in dry-run mode.
-- Real-Time Market Data Pipeline — Data collection and processing for short-duration prediction markets, including quote capture, data quality checks, and backtesting research.
-- Healthcare CRM — A business-software project featuring lead assignment, role-based workflows, duplicate checking, imports, and reporting.
-- Client Web Projects — Websites and technical solutions delivered through Vertex Web Solutions.
-Technical interests
-Python · JavaScript · REST APIs · WebSockets · Automation · Data processing · Testing · Web development
-Let's connect
-- 🌐 Vertex Web Solutions
-- 💻 GitHub repositories
-I'm interested in junior software development, AI automation, and technical implementation opportunities.
+**Software development • Python automation • Web applications • API integrations**
+
+I build software that solves practical problems—from internal business systems to client-facing websites and automation tools. I run [Vertex Web Solutions](https://vertexwebsolutions.co/) and enjoy working across backend logic, interfaces, APIs, and workflow automation.
+
+I'm interested in **junior software engineering, AI automation, and technical implementation** opportunities.
+
+## Selected projects
+
+### 🏥 [Healthcare Sales CRM](https://github.com/nathanaellazala/Medicare-CRM)
+A full-stack CRM for managing leads and sales-team workflows.
+
+- **Backend:** Python, FastAPI, MongoDB, JWT-based authentication and role-based access controls.
+- **Frontend:** React, JavaScript, Tailwind CSS, role-specific dashboards.
+- **Features in source:** Lead assignment, CSV imports, duplicate detection, shared lead pools, reporting, and API tests.
+
+### 🌐 [Vertex Web Solutions](https://github.com/nathanaellazala/vertexwebsolutions)
+The source for my business website and portfolio of client-facing web work.
+
+- React frontend with animated UI components and responsive layouts.
+- Service pages, portfolio presentation, and interactive product demonstrations.
+- **Live site:** [vertexwebsolutions.co](https://vertexwebsolutions.co/)
+
+## Currently building
+
+- **[Discord alert automation](https://github.com/nathanaellazala/DiscordTradingBot)** — Python project for time-sensitive alert parsing, validation, and dry-run order-workflow testing. Documentation is available; source publication is being prepared.
+- **Real-time market data tooling** — WebSocket data capture, cleaning, and backtesting research.
+
+## Tools & interests
+
+`Python` · `JavaScript` · `React` · `FastAPI` · `MongoDB` · `REST APIs` · `WebSockets` · `Automation` · `Testing`
+
+**Languages:** English and Spanish
+
+---
+
+**Website:** [Vertex Web Solutions](https://vertexwebsolutions.co/) · **Code:** [GitHub repositories](https://github.com/nathanaellazala?tab=repositories)
