@@ -13,7 +13,7 @@ Prepared November 17, 2026. Work remains in unmerged branches and pull requests.
 | 5 | [Website #1](https://github.com/nathanaellazala/vertexwebsolutions/pull/1) | Add developer case studies, improve documentation/navigation, clarify demos, remove rendered placeholder testimonials, repair npm build reproducibility |
 | 6 | This profile/career-review PR | Correct stale source-publication status and prepare career documents for factual review |
 
-These are review artifacts. Approval is still required before merge, production deployment, account remediation, résumé publication, or LinkedIn publication. Check repository deployment workflows before any approved merge.
+These are review artifacts. The user explicitly authorized publishing this career-review pack, including résumé drafts and contact information, in a public GitHub review branch and draft PR on November 17, 2026. Approval is still required before merge, production deployment, account remediation, submission or publication of final résumés, or LinkedIn publication. Check repository deployment workflows before any approved merge.
 
 ## Phase 1 — security and reliability
 
@@ -53,7 +53,7 @@ These are review artifacts. Approval is still required before merge, production 
 | Website build on proposed PR | CI=true build passes after direct AJV development dependency and lockfile |
 | Website frontend tests | No tests found; no component test coverage claimed |
 | Website browser preview | Blocked: managed relay timed out waiting for readiness; preview stopped |
-| GitHub Actions | Workflows prepared; see individual PR checks for actual remote status. [Session CI passed](https://github.com/nathanaellazala/Medicare-CRM/actions/runs/44064901713) and [bot CI passed](https://github.com/nathanaellazala/DiscordTradingBot/actions/runs/44065278427); bootstrap CI passed on the preceding head and should be checked again after the final visibility adjustment |
+| GitHub Actions | Workflows prepared; see individual PR checks for actual remote status. [Session CI passed](https://github.com/nathanaellazala/Medicare-CRM/actions/runs/44064901713) and [bot CI passed](https://github.com/nathanaellazala/DiscordTradingBot/actions/runs/44065278427); [bootstrap CI passed on the final visibility-adjustment head](https://github.com/nathanaellazala/Medicare-CRM/actions/runs/44066579072) |
 
 The full original Python dependency lists were not installed or vulnerability-audited. A minimal application-import environment was used for offline CRM tests; the bot's tests use Pillow and standard-library mocks. Existing dependency pins include environment-specific and unrelated packages and need cleanup.
 
@@ -67,7 +67,7 @@ The full original Python dependency lists were not installed or vulnerability-au
 
 ## Phase 3 — website
 
-**Completed:** source review of routing, navigation, service selector, portfolio, metadata, testimonials, and backend scaffold. Website PR adds developer case studies with problem, technical solution, architecture, verification limits, tradeoffs, source links, and email contact. No résumé file is linked publicly while facts remain unconfirmed. The rendered homepage no longer presents placeholder testimonials; the old component remains in source for replacement with approved real feedback.
+**Completed:** source review of routing, navigation, service selector, portfolio, metadata, testimonials, and backend scaffold. Website PR adds developer case studies with problem, technical solution, architecture, verification limits, tradeoffs, source links, and email contact. No résumé file is linked publicly while facts remain unconfirmed. The proposed landing-page source removes the placeholder testimonials from rendering; the old component remains in source for replacement with approved real feedback. The deployed homepage was not changed.
 
 **Verification:** proposed production build passes. Public homepage HTTP response is 200, but source/host equivalence is not established. Browser preview infrastructure failed, so responsiveness, keyboard behavior, contrast, accessibility scores, live navigation, and performance scores are unverified. No screenshots were fabricated.
 

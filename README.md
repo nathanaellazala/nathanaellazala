@@ -19,7 +19,7 @@ A full-stack CRM for managing leads and sales-team workflows.
 The source for my business website and portfolio of client-facing web work.
 
 - React frontend with animated UI components and responsive layouts.
-- Service pages, portfolio presentation, and interactive product demonstrations.
+- Service pages, portfolio presentation, and an illustrative service walkthrough.
 - **Live site:** [vertexwebsolutions.co](https://vertexwebsolutions.co/)
 
 ## Currently building
